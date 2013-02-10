@@ -35,3 +35,30 @@ but skipping any objects which don't pass the test. Create a simple unit test fo
 framework.
 
   See src/main/java/iterators
+
+Given
+
+class Node {
+    object value;
+    Node next;
+}
+Implement method Node getFromEnd(node head, int i);
+
+  See src/main/java/list/List#getFromEnd
+
+Given Account and Transfer classes:
+class Account {
+  int amount;
+
+  lock();
+  unlock();
+}
+
+class Transfer {
+  int amount;
+  account a;
+  account b;
+}
+Implement method void TransferMoney(Transfer t); trying to prevent a deadlock.
+
+  See src/main/java/account/TransferMoney#transfer
