@@ -62,3 +62,20 @@ class Transfer {
 Implement method void TransferMoney(Transfer t); trying to prevent a deadlock.
 
   See src/main/java/account/TransferMoney#transfer
+
+Implement a method that returns whether a String is a palindrome.
+
+  boolean isPalindrome(String s) {
+    return new StringBuilder(s).reverse().toString().equals(s);
+  }
+
+  Imagining that efficiency matters more than readability, see src/main/java/Palindrome.java
+
+Implement a function that receives the name of an Excel column and returns the index of it.
+E.g.: f("A") -> 1, f("AB") -> 28, f("XWA") -> ?
+
+  See src/main/java/ExcelNumbers - XWA = 1223
+
+Implement a function that inverts the digits of an int, e.g., f(123) == 321, without converting them to a String.
+
+  See src/main/java/InvertDigits
