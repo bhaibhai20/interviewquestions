@@ -79,3 +79,30 @@ E.g.: f("A") -> 1, f("AB") -> 28, f("XWA") -> ?
 Implement a function that inverts the digits of an int, e.g., f(123) == 321, without converting them to a String.
 
   See src/main/java/InvertDigits
+
+Implement a method that gives the nth Fibonacci number, e.g., f(0) -> 1, f(1) -> 1, f(5) -> 8
+
+  See src/main/java/Fibonacci
+
+Describe the steps needed to find the largest element of an array.  What's the complexity?
+
+  Set a variable, max, to the value of the first element.  Iterate over the rest, comparing against max and replacing
+  the value of max with the value of the element if it is larger.  max is the result.  O(n) time, O(1) space.
+
+What sorting algorithms do you know?  Which is the most optimal?  What complexity does it have?
+
+Bubblesort, quicksort, mergesort, sleepsort, timsort, radix sort
+timsort, O(n log(n))
+
+  See src/main/java/sorting/Bubblesort
+  See src/main/java/sorting/Quicksort
+  See src/main/java/sorting/Mergesort
+
+How does binary search work?  What complexity does it have?  Why?
+
+  Start in the middle, see whether that element is higher or lower than the searched-for value.  If it's higher,
+  repeat with the higher half only.  If it's lower, repeat with the lower half only.  If it's the searched-for
+  value then we've found the result.  It has complexity O(log(n)) because every step halves the search space.
+
+  For an implementation, see src/main/java/BinarySearch.java
+
