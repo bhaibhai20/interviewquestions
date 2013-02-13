@@ -96,9 +96,10 @@ mergesort (O(n log n) - divide into two lists, mergesort those then merge the tw
 possibly worse performance if the merge is done in-place.
 timsort (mergesort with some adaptation for presorted sequences) - O(n log(n))
 
-  See src/main/java/sorting/Bubblesort
-  See src/main/java/sorting/Quicksort
-  See src/main/java/sorting/Mergesort
+  See src/main/java/sorting/Bubblesort.java
+  See src/main/java/sorting/Quicksort.java
+  See src/main/java/sorting/Mergesort.java
+  See src/main/java/sorting/Sleepsort.java
 
 How does binary search work?  What complexity does it have?  Why?
 
@@ -107,4 +108,37 @@ How does binary search work?  What complexity does it have?  Why?
   value then we've found the result.  It has complexity O(log(n)) because every step halves the search space.
 
   For an implementation, see src/main/java/BinarySearch.java
+
+Given a boolean n by n matrix that represents a labyrinth, where every element indicates whether it's possible to pass,
+how would you implement an algorithm that allows you to find a path between the entrance and the exit?
+
+  Recursively attempt, backtracking where the end of the path is reached.  If recursion is a problem, maintain a
+  separate n by n matrix storing whether we've already attempted going down a particular path.
+
+Given an n by n matrix of letters, implement an algorithm that returns how many times a word appears, moving
+horizontally and vertically.  I think this question is based on Boggle, so it's not directly a wordsearch.
+
+  for each letter in the matrix that matches the starting letter, recursively attempt to move from it in each direction
+  returning the count of words that match.  One problem, it will match, e.g., BOB, twice, so maintain a separate
+  Set<List<Coord>> and return its size at the end.
+
+Overriding equals and hashCode: what is the rule you need to follow and what could happen if you do not?
+
+  x.equals(x), x.equals(y) == y.equals(x), x.equals(y) && y.equals(z) == x.equals(z),
+  x.equals(y) == x.equals(y) provided no modifications,
+  x.equals(null) == false,
+  x.hashCode() == x.hashCode() provided no modifications,
+  if x.equals(y) then x.hashCode() == y.hashCode(),
+
+  If you don't follow it, then any collections that use equals and/or hashCode will appear to be inconsistent.
+  Without breaking those rules you can have inconsistent results if the hashCode changes.
+
+How does a HashMap work (related to the previous question on equals and hashCode)?
+
+  It has a number of buckets that it assigns each key to based on a function of the hashCode, storing the key-value
+  pairs in a linked list within each bucket.
+
+Describe how CountDownLatch works including code.
+
+  See src/main/java/sorting/Sleepsort.java
 
