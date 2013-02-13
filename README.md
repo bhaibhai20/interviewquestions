@@ -13,16 +13,16 @@ Write the functional factorial, both for the recursive version and the iterative
 
 Implement an algorithm that verifies if a binary tree is sorted.
 
-  See src/main/java/BinaryTreeOrdered.java
+  See [src/main/java/BinaryTreeOrdered.java](src/main/java/BinaryTreeOrdered.java)
 
 I have a linked list and there may be a cycle.  How can I tell if there is a cycle?  What's the complexity?
 
-  See src/main/java/LinkedListCycle.java - O(1) time, O(n) space
+  See [src/main/java/LinkedListCycle.java](src/main/java/LinkedListCycle.java) - O(1) time, O(n) space
 
 I have two large numbers that won't fit in any of Java's numeric types (i.e., ignore BigDecimal and BigInteger) so they
 are stored in LinkedLists.  Write a function that will sum them both, returning a new LinkedList.
 
-  See src/main/java/SumLinkedLists.java
+  See [src/main/java/SumLinkedLists.java](src/main/java/SumLinkedLists.java)
 
 Explain why the recursive implementation of quicksort will require O(log(n)) of additional space.
 
@@ -34,7 +34,7 @@ and an IObjectTest instance. Your iterator will then allow iteration over the or
 but skipping any objects which don't pass the test. Create a simple unit test for this
 framework.
 
-  See src/main/java/iterators
+  See [src/main/java/iterators](src/main/java/iterators)
 
 Given
 
@@ -44,7 +44,7 @@ class Node {
 }
 Implement method Node getFromEnd(node head, int i);
 
-  See src/main/java/list/List#getFromEnd
+  See [src/main/java/list/List.java](src/main/java/list/List.java)
 
 Given Account and Transfer classes:
 class Account {
@@ -61,7 +61,7 @@ class Transfer {
 }
 Implement method void TransferMoney(Transfer t); trying to prevent a deadlock.
 
-  See src/main/java/account/TransferMoney#transfer
+  See [src/main/java/account/TransferMoney.java](src/main/java/account/TransferMoney.java)
 
 Implement a method that returns whether a String is a palindrome.
 
@@ -74,15 +74,15 @@ Implement a method that returns whether a String is a palindrome.
 Implement a function that receives the name of an Excel column and returns the index of it.
 E.g.: f("A") -> 1, f("AB") -> 28, f("XWA") -> ?
 
-  See src/main/java/ExcelNumbers - XWA = 1223
+  See [src/main/java/ExcelNumbers.java](src/main/java/ExcelNumbers.java) - XWA = 1223
 
 Implement a function that inverts the digits of an int, e.g., f(123) == 321, without converting them to a String.
 
-  See src/main/java/InvertDigits
+  See [src/main/java/InvertDigits.java](src/main/java/InvertDigits.java)
 
 Implement a method that gives the nth Fibonacci number, e.g., f(0) -> 1, f(1) -> 1, f(5) -> 8
 
-  See src/main/java/Fibonacci
+  See [src/main/java/Fibonacci.java](src/main/java/Fibonacci.java)
 
 Describe the steps needed to find the largest element of an array.  What's the complexity?
 
@@ -96,10 +96,10 @@ mergesort (O(n log n) - divide into two lists, mergesort those then merge the tw
 possibly worse performance if the merge is done in-place.
 timsort (mergesort with some adaptation for presorted sequences) - O(n log(n))
 
-  See src/main/java/sorting/Bubblesort.java
-  See src/main/java/sorting/Quicksort.java
-  See src/main/java/sorting/Mergesort.java
-  See src/main/java/sorting/Sleepsort.java
+  See [src/main/java/sorting/Bubblesort.java](src/main/java/sorting/Bubblesort.java)
+  See [src/main/java/sorting/Quicksort.java](src/main/java/sorting/Quicksort.java)
+  See [src/main/java/sorting/Mergesort.java](src/main/java/sorting/Mergesort.java)
+  See [src/main/java/sorting/Sleepsort.java](src/main/java/sorting/Sleepsort.java)
 
 How does binary search work?  What complexity does it have?  Why?
 
@@ -140,7 +140,7 @@ How does a HashMap work (related to the previous question on equals and hashCode
 
 Describe how CountDownLatch works including code.
 
-  See src/main/java/sorting/Sleepsort.java
+  See [src/main/java/sorting/Sleepsort.java](src/main/java/sorting/Sleepsort.java)
 
 Which are the base collection interfaces in Java?
 
@@ -208,11 +208,11 @@ Examples of design patterns in the Java APIs.
 
 Write code for a simple implementation of HashMap/Hashtable
 
-  See src/main/java/Hash.java
+  See [src/main/java/Hash.java](src/main/java/Hash.java)
 
 Write a short program to illustrate the concept of deadlock
 
-  See src/main/java/Deadlock.java
+  See [src/main/java/Deadlock.java](src/main/java/Deadlock.java)
 
 Exceptions
 
