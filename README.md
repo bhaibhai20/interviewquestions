@@ -1,10 +1,15 @@
 I have two sand clocks, one that measures 4 minutes and one that measures 7.  How can I measure 9 minutes?
 
   Turn them both over at the same time.  When the 4 minute one runs out, the 7 minute one has 3 left.
+
   Turn both over again.  When the 7 minute one runs out, the 4 minute one has 1 left.  Ignore the 7 minute one from now.
+
   Turn the 4 minute one over.  The 9 minutes start here.
+
   Turn the 4 minute one over again.  You've measured 1 minute so far.
+
   Turn the 4 minute one over again.  You've measured 5 minutes so far.
+
   Turn the 4 minute one over again.  You've measured 9 minutes.
 
 Write the functional factorial, both for the recursive version and the iterative version.
