@@ -188,3 +188,24 @@ Garbage collection, different schemes, memory management
   Memory management in general, you can use malloc/free in C, new/delete in C++, and if you need to manage memory
   manually in Java, you could allocate a big ByteBuffer and manage allocations within it.
 
+Explain what 'path to root' means in the context of garbage collection.  What are roots?
+
+  A root is an object or context from which it is known that referenced objects should not be garbage collected, e.g.,
+  a running method, a static field, JNI references, an object synchronized upon.
+
+  The path to root is the path of references between an object and a root that proves that the object should not be
+  collected, e.g., if a static field x has a field y that in turn has a field z pointing to our object, that is the path.
+
+Examples of design patterns in the Java APIs.
+
+  Strategy - Comparator
+  Visitor - java.nio.file.FileVisitor
+  Factory - Basically all the DOM stuff, BorderFactory
+  Singleton - Collections.EMPTY_LIST
+  Builder - DOM's DocumentBuilder, ProcessBuilder, StringBuilder
+  Flyweight - Integer.valueOf maintaining a cache of -128 to +127.
+  Command - Runnable, Callable
+
+Write code for a simple implementation of HashMap/Hashtable
+
+  See src/main/java/Hash.java
