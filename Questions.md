@@ -209,3 +209,7 @@ Examples of design patterns in the Java APIs.
 Write code for a simple implementation of HashMap/Hashtable
 
   See src/main/java/Hash.java
+
+Write a short program to illustrate the concept of deadlock
+
+  See src/main/java/Deadlock.java
