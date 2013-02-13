@@ -9,7 +9,7 @@ I have two sand clocks, one that measures 4 minutes and one that measures 7.  Ho
 
 Write the functional factorial, both for the recursive version and the iterative version.
 
-  See src/main/java/Factorial.java
+  See [src/main/java/Factorial.java](src/main/java/Factorial.java)
 
 Implement an algorithm that verifies if a binary tree is sorted.
 
