@@ -91,8 +91,10 @@ Describe the steps needed to find the largest element of an array.  What's the c
 
 What sorting algorithms do you know?  Which is the most optimal?  What complexity does it have?
 
-Bubblesort, quicksort, mergesort, sleepsort, timsort, radix sort
-timsort, O(n log(n))
+Bubblesort O(n^2), quicksort (O(n log n) worst case O(n^2) when the pivot always ends up at the wrong end,
+mergesort (O(n log n) - divide into two lists, mergesort those then merge the two into one.  Possible but tricky and
+possibly worse performance if the merge is done in-place.
+timsort (mergesort with some adaptation for presorted sequences) - O(n log(n))
 
   See src/main/java/sorting/Bubblesort
   See src/main/java/sorting/Quicksort
