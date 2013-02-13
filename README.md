@@ -100,8 +100,11 @@ possibly worse performance if the merge is done in-place.
 timsort (mergesort with some adaptation for presorted sequences) - O(n log(n))
 
   See [src/main/java/sorting/Bubblesort.java](src/main/java/sorting/Bubblesort.java)
+
   See [src/main/java/sorting/Quicksort.java](src/main/java/sorting/Quicksort.java)
+
   See [src/main/java/sorting/Mergesort.java](src/main/java/sorting/Mergesort.java)
+
   See [src/main/java/sorting/Sleepsort.java](src/main/java/sorting/Sleepsort.java)
 
 How does binary search work?  What complexity does it have?  Why?
@@ -152,24 +155,36 @@ Which are the base collection interfaces in Java?
 What does each one guarantee?
 
   Collection guarantees nothing.
+
   List guarantees insertion order unless overridden with add(int,K) or set.
+
   Set guarantees that each element is not null, and that there are no duplicates.
+
   Queue guarantees nothing.
+
   Map guarantees nothing.
 
 How do the most common implementations work?
 
   ArrayList has a backing array that grows according to some implementation-defined function.
+
   LinkedList contains nodes that store the value and a next pointer (actually also a prev pointer).
+
   HashSet is based on a HashMap with a dummy value for each key.
+
   TreeSet is based on a TreeMap with a dummy value for each key.
+
   HashMap is an array of buckets where each bucket is a linked list of key-value pairs.
+
   TreeMap is based on a binary tree where each node has a reference to its parent and optional two children,
   always maintaining order based on a Comparator or the Comparables that are the elements.
+
   LinkedHashMap extends HashMap adding a doubly-linked list maintaining the order of insertion as the order of iteration.
     It can also be used via the int, float, boolean constructor to maintain the order in terms of most recent access.
+
   ArrayBlockingQueue is a Queue implementation that blocks when putting in a full queue, and blocks when taking from an
   empty queue, so it's handy for inter-thread messaging.
+
   DelayQueue is a Queue implementation that only 'releases' each element after its delay has been reached.
 
 Garbage collection, different schemes, memory management
@@ -202,11 +217,17 @@ Explain what 'path to root' means in the context of garbage collection.  What ar
 Examples of design patterns in the Java APIs.
 
   Strategy - Comparator
+
   Visitor - java.nio.file.FileVisitor
+
   Factory - Basically all the DOM stuff, BorderFactory
+
   Singleton - Collections.EMPTY_LIST
+
   Builder - DOM's DocumentBuilder, ProcessBuilder, StringBuilder
+
   Flyweight - Integer.valueOf maintaining a cache of -128 to +127.
+
   Command - Runnable, Callable
 
 Write code for a simple implementation of HashMap/Hashtable
@@ -225,19 +246,29 @@ Exceptions
 Logging
 
   java.util.logging, limited control
+
   log4j, good
+
   logback, better
+
   slf4j, interface over various
+
   generally can configure them via XML or programmatically.
+
   log.error("foo", e);
 
 Determination of big-oh complexity
 
   Roughly, if the algorithm doesn't depend at all on the length, O(1), e.g., list.head
+
   If it's a divide and conquer without any extra iteration, O(log n), e.g., binary search
+
   If it has a loop over n, O(n), e.g., maximum value in a list.
+
   If it has a loop over n, plus some divide and conquer, O(n.log(n)), e.g., mergesort
+
   If it has two nested loops, O(n^2), e.g., bubblesort.
+
   If it's a brute force search, probably O(c^n), e.g., travelling salesman.
 
 Deadlocks
