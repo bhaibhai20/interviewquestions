@@ -47,18 +47,20 @@ Implement method Node getFromEnd(node head, int i);
   See [src/main/java/list/List.java](src/main/java/list/List.java)
 
 Given Account and Transfer classes:
-class Account {
-  int amount;
+```java
+    class Account {
+      int amount;
 
-  lock();
-  unlock();
-}
+      lock();
+      unlock();
+    }
 
-class Transfer {
-  int amount;
-  account a;
-  account b;
-}
+    class Transfer {
+      int amount;
+      account a;
+      account b;
+    }```
+
 Implement method void TransferMoney(Transfer t); trying to prevent a deadlock.
 
   See [src/main/java/account/TransferMoney.java](src/main/java/account/TransferMoney.java)
