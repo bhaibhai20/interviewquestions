@@ -213,3 +213,83 @@ Write code for a simple implementation of HashMap/Hashtable
 Write a short program to illustrate the concept of deadlock
 
   See src/main/java/Deadlock.java
+
+Exceptions
+
+  Checked exceptions, runtime exceptions, errors, throws, try..catch..finally, try-with-resources, throw,
+  cost is mainly in filling the stack trace, generally should set a serializationVersionUID
+
+Logging
+
+  java.util.logging, limited control
+  log4j, good
+  logback, better
+  slf4j, interface over various
+  generally can configure them via XML or programmatically.
+  log.error("foo", e);
+
+Determination of big-oh complexity
+
+  Roughly, if the algorithm doesn't depend at all on the length, O(1), e.g., list.head
+  If it's a divide and conquer without any extra iteration, O(log n), e.g., binary search
+  If it has a loop over n, O(n), e.g., maximum value in a list.
+  If it has a loop over n, plus some divide and conquer, O(n.log(n)), e.g., mergesort
+  If it has two nested loops, O(n^2), e.g., bubblesort.
+  If it's a brute force search, probably O(c^n), e.g., travelling salesman.
+
+Deadlocks
+
+  When two or more threads each hold a resource and are blocking waiting for a resource that another thread in the group owns.
+  None can proceed.  Java's thread dumps have deadlock detection.
+
+Monitors
+
+  The part of an object that interacts with synchronized.  Only one thread at a time may hold a monitor, thus it can be used to protect regions from concurrent access.
+
+Locks
+
+  Same idea as monitor but with other options like reentrancy, allowing multiple read locks, allowing a time-constrained tryLock, etc.
+
+Happens-before
+
+  A condition where the JVM guarantees that an update made in one thread/location will be visible from another, i.e., if A happens-before B then A can correctly use B's results.
+
+Monitor versus semaphore
+
+  A monitor is basically boolean, a semaphore is an int that can go up and down with some semantics about whether 0 means free.
+
+Atomic access
+
+  Operations that can either complete 100% or not happen/be visible at all, e.g., int++ is atomic, double++ is not.  AtomicInteger.
+
+Does a monitor work at the instance level, class-level, method-level?
+
+  A monitor is always on an instance.  The synchronized construct when on an instance method applies to this, and on a static method it applies to the Class instance.
+
+What does a Lock guarantee?
+
+  That the lock cannot be obtained again until the lock is released.
+
+What does volatile guarantee?
+
+  It tells the JVM not to cache the value of the variable per-thread, so that updates are visible across all threads instantly.
+
+Clustered index
+
+  An index that forces the data to be accessible in a certain order.  Handy for sequential access or ranges.  E.g., telephone directory.
+
+Join types
+
+  Inner join, only those records from both that match.
+
+  Full outer join, all records from both, regardless of matches.  The missing side will contain null.
+
+  Left outer join, all records from the first, and if they match, records from the second, otherwise null.
+
+  Right outer join, all records from the second, and if they match, records from the first, otherwise null.
+
+  Cross join, all combinations of both:
+    select * from foo cross join bar
+    select * from foo, bar
+
+
