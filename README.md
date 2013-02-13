@@ -38,16 +38,17 @@ framework.
 
 Given
 
-class Node {
-    object value;
-    Node next;
-}
+    class Node {
+        object value;
+        Node next;
+    }
+
 Implement method Node getFromEnd(node head, int i);
 
   See [src/main/java/list/List.java](src/main/java/list/List.java)
 
 Given Account and Transfer classes:
-```java
+
     class Account {
       int amount;
 
@@ -59,7 +60,7 @@ Given Account and Transfer classes:
       int amount;
       account a;
       account b;
-    }```
+    }
 
 Implement method void TransferMoney(Transfer t); trying to prevent a deadlock.
 
@@ -109,7 +110,7 @@ How does binary search work?  What complexity does it have?  Why?
   repeat with the higher half only.  If it's lower, repeat with the lower half only.  If it's the searched-for
   value then we've found the result.  It has complexity O(log(n)) because every step halves the search space.
 
-  For an implementation, see src/main/java/BinarySearch.java
+  For an implementation, see [src/main/java/BinarySearch.java](src/main/java/BinarySearch.java)
 
 Given a boolean n by n matrix that represents a labyrinth, where every element indicates whether it's possible to pass,
 how would you implement an algorithm that allows you to find a path between the entrance and the exit?
@@ -151,7 +152,7 @@ Which are the base collection interfaces in Java?
 What does each one guarantee?
 
   Collection guarantees nothing.
-  List guarantees nothing.
+  List guarantees insertion order unless overridden with add(int,K) or set.
   Set guarantees that each element is not null, and that there are no duplicates.
   Queue guarantees nothing.
   Map guarantees nothing.
