@@ -168,3 +168,23 @@ How do the most common implementations work?
   ArrayBlockingQueue is a Queue implementation that blocks when putting in a full queue, and blocks when taking from an
   empty queue, so it's handy for inter-thread messaging.
   DelayQueue is a Queue implementation that only 'releases' each element after its delay has been reached.
+
+Garbage collection, different schemes, memory management
+
+  Garbage collection is provided by the runtime to avoid that the programmer need to track when an object is no longer
+  reachable and can be removed.  This helps the programmer because at least in the case of immutable objects there is
+  no need for the concept of ownership of an object.
+
+  Python's GC is reference-counting with cycle detection, very predictable immediate collection.
+  Java has generational collectors, so that objects that survive the young generation make it to a longer-lived
+  generation, etc.  Objects can be moved around in memory by the GC for better cache locality.
+  There's the throughput collector (-XX:+UseParallelGC) which gives control over the number of threads that will perform
+  garbage collection (-XX:ParallelGCThreads=..).
+  There's the concurrent mark sweep collector, also called the concurrent low pause collector, which might give a hit to
+  performance generally but with the advantage that there will be shorter pauses.
+  There's the garbage first garbage collector (G1GC), mainly for larger heaps.
+  Azul Zing offers 'pauseless' garbage collection, although it still has very short (3ms or lower) pauses.
+
+  Memory management in general, you can use malloc/free in C, new/delete in C++, and if you need to manage memory
+  manually in Java, you could allocate a big ByteBuffer and manage allocations within it.
+
