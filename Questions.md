@@ -136,9 +136,35 @@ Overriding equals and hashCode: what is the rule you need to follow and what cou
 How does a HashMap work (related to the previous question on equals and hashCode)?
 
   It has a number of buckets that it assigns each key to based on a function of the hashCode, storing the key-value
-  pairs in a linked list within each bucket.
+  pairs in a linked list within each bucket.  When retrieving values if the hashCode matches equals is checked.
 
 Describe how CountDownLatch works including code.
 
   See src/main/java/sorting/Sleepsort.java
 
+Which are the base collection interfaces in Java?
+
+  Collection, List, Set, Queue, Map
+
+What does each one guarantee?
+
+  Collection guarantees nothing.
+  List guarantees nothing.
+  Set guarantees that each element is not null, and that there are no duplicates.
+  Queue guarantees nothing.
+  Map guarantees nothing.
+
+How do the most common implementations work?
+
+  ArrayList has a backing array that grows according to some implementation-defined function.
+  LinkedList contains nodes that store the value and a next pointer (actually also a prev pointer).
+  HashSet is based on a HashMap with a dummy value for each key.
+  TreeSet is based on a TreeMap with a dummy value for each key.
+  HashMap is an array of buckets where each bucket is a linked list of key-value pairs.
+  TreeMap is based on a binary tree where each node has a reference to its parent and optional two children,
+  always maintaining order based on a Comparator or the Comparables that are the elements.
+  LinkedHashMap extends HashMap adding a doubly-linked list maintaining the order of insertion as the order of iteration.
+    It can also be used via the int, float, boolean constructor to maintain the order in terms of most recent access.
+  ArrayBlockingQueue is a Queue implementation that blocks when putting in a full queue, and blocks when taking from an
+  empty queue, so it's handy for inter-thread messaging.
+  DelayQueue is a Queue implementation that only 'releases' each element after its delay has been reached.
